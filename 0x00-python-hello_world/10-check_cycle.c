@@ -16,11 +16,11 @@ int check_cycle(listint_t *list)
 
 	while (slow && fast)
 	{
-		slow = slow->next;
 		if (fast->next)
 			fast = fast->next->next;
 		else
-			return (0);
+			break;
+		slow = slow->next;
 		if (slow == fast)
 			return (1);
 	}
