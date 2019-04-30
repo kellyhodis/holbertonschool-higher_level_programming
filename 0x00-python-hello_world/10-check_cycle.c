@@ -20,7 +20,7 @@ int check_cycle(listint_t *list)
 		if (fast->next)
 			fast = fast->next->next;
 		else
-			fast = fast->next;
+			return (0);
 		if (slow == fast)
 			return (1);
 	}
