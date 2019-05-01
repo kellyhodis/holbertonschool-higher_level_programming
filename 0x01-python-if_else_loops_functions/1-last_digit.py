@@ -9,7 +9,7 @@ if last > 5:
     s = " and is greater than 5"
 elif last == 0:
     s = " and is 0"
-elif last < 6 & last != 0:
+elif last < 6 and last != 0:
     s = " and is less than 6 and not 0"
 else:
     s = ""
