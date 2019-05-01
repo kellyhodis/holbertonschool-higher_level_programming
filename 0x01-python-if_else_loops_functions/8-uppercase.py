@@ -10,4 +10,4 @@ def uppercase(str):
         if ord(i) > 96 and ord(i) < 123:
             print("{:c}".format(ord(i) - 32), end=spaces)
         else:
-            print("{:c}".format(i), end=spaces)
+            print("{}".format(i), end=spaces)
