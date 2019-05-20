@@ -23,7 +23,6 @@ Files:
 100-safe_print_integer_err.py - prints an integer with error message
 101-safe_function.py - executes a function safely
 102-magic_calculation.py - Python function reverse engineered from the attached bytecode*
-103-python.c - prints basic info about Python lists, bytes, and float objects
 ```
 
 * bytecode to interpret for `102-magic_calculation.py`:
@@ -84,6 +83,19 @@ Files:
  13     >>  103 LOAD_FAST                2 (result)
             106 RETURN_VALUE
 ```
+
+![C logo](https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png)
+
+Compilation:
+
+`gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,libPython.so -o libPython.so -fPIC -I/usr/include/python3.4 103-python.c`
+
+Usage:
+`TBE`
+
+Files:
+
+`103-python.c - prints basic info about Python lists, bytes, and float objects`
 
 <a href="url" alt="Holberton logo"><img src="https://lh4.googleusercontent.com/yUzaviDgzDIq4-ZHp9k0YU5fsz0nOdekNRt1qHgp7Qdlw5BNfe6bETEf5ZWd-Vkn_m57BPx7HcDrwFK41ptLnQLTNipWmTAtiQwZL_8s97Nkzn94xP7XVKb3RnV0fx8QEZoxlkVd" width="350"></a>
 
