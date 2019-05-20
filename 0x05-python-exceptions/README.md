@@ -23,7 +23,7 @@ Files:
 100-safe_print_integer_err.py - prints an integer with error message
 101-safe_function.py - executes a function safely
 102-magic_calculation.py - Python function reverse engineered from the attached bytecode*
-103-python.c - three C functions that print some basic info about Python lists, bytes, and float objects
+103-python.c - prints basic info about Python lists, bytes, and float objects
 ```
 
 * bytecode to interpret for `102-magic_calculation.py`:
