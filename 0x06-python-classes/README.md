@@ -1,6 +1,6 @@
 ![python logo](https://www.python.org/static/community_logos/python-logo-generic.svg)
 
-# Python Exceptions: Algorithms in Python
+# Python Classes and Objects: OOP in Python
 
 Make executable inside shell: 
 
