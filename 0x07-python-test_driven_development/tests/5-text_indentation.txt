@@ -1,0 +1,23 @@
+This is a doctest that checks the text_indentation module
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("test.this")
+test.
+<BLANKLINE>
+this
+
+>>> text_indentation(5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("another . test")
+another .
+<BLANKLINE>
+test
+
+>>> text_indentation("yet another test.        check it out")
+yet another test.
+<BLANKLINE>
+check it out
