@@ -1,0 +1,18 @@
+This is a doctest that checks the my_list module
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+
+>>> my_list.print_sorted()
+[]
+
+>>> my_list.append(100)
+
+>>> my_list.print_sorted()
+[100]
+
+>>> my_list.append(99)
+
+>>> my_list.print_sorted()
+[99, 100]
