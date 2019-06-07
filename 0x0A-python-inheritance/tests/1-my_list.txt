@@ -16,3 +16,10 @@ This is a doctest that checks the my_list module
 
 >>> my_list.print_sorted()
 [99, 100]
+
+>>> my_list.append(-1)
+
+>>> my_list.print_sorted()
+[-1, 99, 100]
+
+>>> my_list.sort()
