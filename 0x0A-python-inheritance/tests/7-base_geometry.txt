@@ -1,0 +1,24 @@
+This is a doctest that checks the BaseGeometry module
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> b = BaseGeometry()
+
+>>> b.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> b.integer_validator("time", 11)
+
+>>> b.integer_validator("steps", -2)
+Traceback (most recent call last):
+...
+ValueError: steps must be greater than 0
+
+>>> b.integer_validator("songs", "love")
+Traceback (most recent call last):
+...
+TypeError: songs must be an integer
+
+
