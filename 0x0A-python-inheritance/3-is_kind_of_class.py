@@ -9,3 +9,4 @@ def is_kind_of_class(obj, a_class):
     """
     if isinstance(obj, a_class) or type(obj) is a_class:
         return True
+    return False
