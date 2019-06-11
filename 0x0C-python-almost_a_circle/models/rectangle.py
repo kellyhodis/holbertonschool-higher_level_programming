@@ -15,14 +15,18 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    # check if value is int
     def input_int(self, input, attr):
         if type(input) is not int:
             raise TypeError("{} must be an integer".format(attr))
 
+    # check if int is <= 0
+    # for width and height
     def wh_under_zero(self, input, attr):
         if input <= 0:
             raise ValueError("{} must be > 0".format(attr))
 
+    # check if int is < 0
     def under_zero(self, input, attr):
         if input < 0:
             raise ValueError("{} must be >= 0".format(attr))
