@@ -15,11 +15,19 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    # area public method
+    """public methods
+    """
+    # returns area of rectangle
     def area(self):
         return self.__width * self.__height
 
-    # error checking methods
+    # prints rectangle in stdout
+    def display(self):
+        for k in range(0, self.__height):
+            print("#" * self.__width)
+
+    """error checking methods
+    """
 
     # check if value is int
     def input_int(self, input, attr):
