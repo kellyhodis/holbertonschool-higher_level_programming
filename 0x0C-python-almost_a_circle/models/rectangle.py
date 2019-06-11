@@ -15,6 +15,12 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    # area public method
+    def area(self):
+        return self.__width * self.__height
+
+    # error checking methods
+
     # check if value is int
     def input_int(self, input, attr):
         if type(input) is not int:
