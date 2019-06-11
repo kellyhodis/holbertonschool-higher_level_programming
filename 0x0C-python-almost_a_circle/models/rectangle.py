@@ -26,6 +26,14 @@ class Rectangle(Base):
         for k in range(0, self.__height):
             print("#" * self.__width)
 
+    # override __str__ method
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)
+
     """error checking methods
     """
     # check if value is int
