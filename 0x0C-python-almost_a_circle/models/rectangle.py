@@ -23,8 +23,12 @@ class Rectangle(Base):
 
     # prints rectangle in stdout
     def display(self):
+        for i in range(0, self.__y):
+            print()
         for k in range(0, self.__height):
-            print("#" * self.__width)
+            print(" " * self.__x, end="")
+            print("#" * self.__width, end="")
+            print()
 
     # override __str__ method
     def __str__(self):
