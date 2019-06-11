@@ -28,7 +28,6 @@ class Rectangle(Base):
 
     """error checking methods
     """
-
     # check if value is int
     def input_int(self, input, attr):
         if type(input) is not int:
@@ -45,6 +44,8 @@ class Rectangle(Base):
         if input < 0:
             raise ValueError("{} must be >= 0".format(attr))
 
+    """properties and setters
+    """
     @property
     def width(self):
         return self.__width
