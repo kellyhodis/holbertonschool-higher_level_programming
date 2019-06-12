@@ -33,6 +33,5 @@ class Base:
         """
         filename = "{}.json".format(list_objs[0].__class__.__name__)
         with open(filename, "w+") as file:
-            else:
-                for i in list_objs:
-                    file.write(cls.to_json_string(i), default="[]")
+            for i in list_objs:
+                file.write(cls.to_json_string(i), default="[]")
