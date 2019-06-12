@@ -43,6 +43,10 @@ class Square(Rectangle):
             except:
                 pass
 
+    # return dictionary representation of Square
+    def to_dictionary(self):
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+
     """properties and setters
     """
     @property
