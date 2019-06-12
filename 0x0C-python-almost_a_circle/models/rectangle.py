@@ -55,6 +55,11 @@ class Rectangle(Base):
             except:
                 pass
 
+    # return dictionary representation of Rectangle
+    def to_dictionary(self):
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
+
     # override __str__ method
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
