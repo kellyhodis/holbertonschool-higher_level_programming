@@ -33,7 +33,7 @@ class Base:
         """
         filename = "{}.json".format(list_objs[0].__class__.__name__)
         if list_objs is None:
-            list_ = list_objs
+            list_ = []
         else:
             list_ = [obj.to_dictionary() for obj in list_objs]
         with open(filename, "w") as file:
