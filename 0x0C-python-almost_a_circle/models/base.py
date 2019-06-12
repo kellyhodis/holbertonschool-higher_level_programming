@@ -34,4 +34,3 @@ class Base:
             else:
                 for i in list_objs:
                     file.write(cls.to_json_string(i), default="[]")
-
