@@ -19,6 +19,30 @@ class Square(Rectangle):
                                                  self.x, self.y,
                                                  self.width)
 
+    # update class arguments
+    def update(self, *args, **kwargs):
+        try:
+            self.id = args[0]
+        except:
+            for key, value in kwargs.items():
+                if key is "id":
+                    self.id = value
+                if key is "size":
+                    self.width = value
+                    self.height = value
+                if key is "x":
+                    self.x = value
+                if key is "y":
+                    self.y = value
+        else:
+            try:
+                self.width = args[1]
+                self.height = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except:
+                pass
+
     """properties and setters
     """
     @property
