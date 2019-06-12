@@ -52,6 +52,9 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set
         """
-        inst = cls(1, 1)
+        if cls.__name__ is "Rectangle":
+            inst = cls(1, 1)
+        else:
+            inst = cls(1)
         inst.update(**dictionary)
         return inst
