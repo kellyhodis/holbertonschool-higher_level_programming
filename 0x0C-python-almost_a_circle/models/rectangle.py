@@ -33,15 +33,29 @@ class Rectangle(Base):
             print()
 
     # assigns argument to each attribute
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         try:
             self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
         except:
-            pass
+            for key, value in kwargs.items():
+                if key is "id":
+                    self.id = value
+                if key is "width":
+                    self.__width = value
+                if key is "height":
+                    self.__height = value
+                if key is "x":
+                    self.__x = value
+                if key is "y":
+                    self.__y = value
+        else:
+            try:
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except:
+                pass
 
     # override __str__ method
     def __str__(self):
