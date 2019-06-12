@@ -7,8 +7,9 @@ from models.base import Base
 class Rectangle(Base):
     """class that inherits from Base
     """
-    # class constructor
     def __init__(self, width, height, x=0, y=0, id=None):
+        """class constructor
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -19,10 +20,13 @@ class Rectangle(Base):
     """
     # returns area of rectangle
     def area(self):
+        """finds area of rectangle
+        """
         return self.__width * self.__height
 
-    # prints rectangle in stdout
     def display(self):
+        """prints rectangle in stdout
+        """
         for i in range(0, self.__y):
             print()
         for k in range(0, self.__height):
@@ -30,8 +34,9 @@ class Rectangle(Base):
             print("#" * self.__width, end="")
             print()
 
-    # assigns argument to each attribute
     def update(self, *args, **kwargs):
+        """assigns argument to each attribute
+        """
         try:
             self.id = args[0]
         except:
@@ -55,13 +60,15 @@ class Rectangle(Base):
             except:
                 pass
 
-    # return dictionary representation of Rectangle
     def to_dictionary(self):
+        """return dictionary representation of Rectangle
+        """
         return {"id": self.id, "width": self.__width, "height": self.__height,
                 "x": self.__x, "y": self.__y}
 
-    # override __str__ method
     def __str__(self):
+        """override __str_ method
+        """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.__x,
                                                        self.__y,
@@ -70,19 +77,21 @@ class Rectangle(Base):
 
     """error checking methods
     """
-    # check if value is int
     def input_int(self, input, attr):
+        """check if value is int
+        """
         if type(input) is not int:
             raise TypeError("{} must be an integer".format(attr))
 
-    # check if int is <= 0
-    # for width and height
     def wh_under_zero(self, input, attr):
+        """check if int is <= 0 for width and height
+        """
         if input <= 0:
             raise ValueError("{} must be > 0".format(attr))
 
-    # check if int is < 0
     def under_zero(self, input, attr):
+        """check if int is < 0
+        """
         if input < 0:
             raise ValueError("{} must be >= 0".format(attr))
 
@@ -90,40 +99,56 @@ class Rectangle(Base):
     """
     @property
     def width(self):
+        """width getter
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """width setter
+        """
         self.input_int(value, "width")
         self.wh_under_zero(value, "width")
         self.__width = value
 
     @property
     def height(self):
+        """height getter
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """height setter
+        """
         self.input_int(value, "height")
         self.wh_under_zero(value, "height")
         self.__height = value
 
     @property
     def x(self):
+        """x getter
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """x setter
+        """
         self.input_int(value, "x")
         self.under_zero(value, "x")
         self.__x = value
 
     @property
     def y(self):
+        """y getter
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """y setter
+        """
         self.input_int(value, "y")
         self.under_zero(value, "y")
         self.__y = value
