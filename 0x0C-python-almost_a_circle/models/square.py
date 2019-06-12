@@ -13,14 +13,16 @@ class Square(Rectangle):
 
     """public methods
     """
-    # override __str__
     def __str__(self):
+        """override __str__
+        """
         return "[Square] ({}) {}/{} - {}".format(self.id,
                                                  self.x, self.y,
                                                  self.width)
 
-    # update class arguments
     def update(self, *args, **kwargs):
+        """update class arguments
+        """
         try:
             self.id = args[0]
         except:
@@ -43,18 +45,23 @@ class Square(Rectangle):
             except:
                 pass
 
-    # return dictionary representation of Square
     def to_dictionary(self):
+        """return dictionary representation of Square
+        """
         return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
 
     """properties and setters
     """
     @property
     def size(self):
+        """size getter
+        """
         return self.width
 
     @size.setter
     def size(self, value):
+        """size setter
+        """
         super().input_int(value, "width")
         super().wh_under_zero(value, "width")
         self.width = value
