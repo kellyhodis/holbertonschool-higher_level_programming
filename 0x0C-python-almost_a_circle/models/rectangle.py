@@ -23,8 +23,6 @@ class Rectangle(Base):
 
     # prints rectangle in stdout
     def display(self):
-        if self.__x is 0 and self.__y is 0:
-            print()
         for i in range(0, self.__y):
             print()
         for k in range(0, self.__height):
