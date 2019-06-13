@@ -120,18 +120,50 @@ class TestRectangle(unittest.TestCase):
     def test___str(self):
         """test for __str__ method
         """
+        # test that the str representation is correct
+        r = Rectangle(7, 8)
+        """
+        self.assertEqual(r.__str__,
+                         "[Rectangle] ({}) {}/{} - {}/{}".format(r.id, r.x,
+                                                                 r.y,
+                                                                 r.width,
+                                                                 r.height))
+        """
 
     def test_input_int(self):
         """test for input_int method
         """
+        r = Rectangle(1, 1)
+
+        # check that input must be an integer
+        with self.assertRaises(TypeError):
+            r.input_int("5", "height")
 
     def test_wh_under_zero(self):
         """test for wh_under_zero method
         """
+        r = Rectangle(1, 1)
+
+        # check that input must be >= 0 for width and height
+        with self.assertRaises(ValueError):
+            r.wh_under_zero(0, "width")
+        with self.assertRaises(ValueError):
+            r.wh_under_zero(-1, "width")
+
+        with self.assertRaises(ValueError):
+            r.wh_under_zero(0, "height")
+        with self.assertRaises(ValueError):
+            r.wh_under_zero(-1, "height")
 
     def test_under_zero(self):
         """test for under_zero method
         """
+        # check that input must be >= 0 for x and y
+        r = Rectangle(1, 1)
+        with self.assertRaises(ValueError):
+            r.under_zero(-2, "x")
+        with self.assertRaises(ValueError):
+            r.under_zero(-2, "y")
 
     def test_width_getter(self):
         """test for width_getter
