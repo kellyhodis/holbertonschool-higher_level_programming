@@ -64,3 +64,12 @@ class TestSquare(unittest.TestCase):
         r = Square.create()
         with self.assertRaises(TypeError):
             r.size = "r"
+
+    def test_square_load_from_file(self):
+        """test for load_from_file with Square
+        """
+        s = Square(2)
+
+        # check when file doesn't exist
+        l = s.load_from_file()
+        self.assertIsInstance(l, list)
