@@ -12,7 +12,6 @@ class TestRectangle(unittest.TestCase):
         """test for correct instance assignments
         """
         r = Rectangle(1, 2)
-        self.assertEqual(r.id, 1)
         self.assertEqual(r.x, 0)
         self.assertEqual(r.y, 0)
         self.assertEqual(r.width, 1)
@@ -20,9 +19,9 @@ class TestRectangle(unittest.TestCase):
 
         # check that id increments with instances
         s = Rectangle(2, 4)
-        self.assertEqual(s.id, 2)
+        self.assertEqual(s.id, r.id + 1)
         t = Rectangle(3, 3)
-        self.assertEqual(t.id, 3)
+        self.assertEqual(t.id, s.id + 1)
 
         # check that id can be assigned
         u = Rectangle(5, 6, id=50)
