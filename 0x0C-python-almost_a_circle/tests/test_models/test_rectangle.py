@@ -122,12 +122,10 @@ class TestRectangle(unittest.TestCase):
         """
         # test that the str representation is correct
         r = Rectangle(7, 8)
+        rstr = r.__str__
         """
-        self.assertEqual(r.__str__,
-                         "[Rectangle] ({}) {}/{} - {}/{}".format(r.id, r.x,
-                                                                 r.y,
-                                                                 r.width,
-                                                                 r.height))
+        self.assertEqual(rstr.split(), ['[Rectangle]', '(' + r.id + ')',
+                         r.x + '/' + r.y, '-', r.width + '/' + r.height])
         """
 
     def test_input_int(self):
