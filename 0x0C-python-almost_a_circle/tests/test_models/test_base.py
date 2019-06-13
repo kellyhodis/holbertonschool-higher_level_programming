@@ -36,6 +36,31 @@ class TestBase(unittest.TestCase):
         """test for from_json_string method
         """
 
+        # test for empty string
+        s = ""
+        b = Base()
+        l = b.from_json_string(s)
+        self.assertTrue(len(l) is 0)
+        self.assertIsInstance(l, list)
+
+        # test for None parameter
+        a = None
+        m = b.from_json_string(a)
+        self.assertTrue(len(m) is 0)
+        self.assertIsInstance(m, list)
+
+        # test for string = "[]"
+        c = "[]"
+        n = b.from_json_string(c)
+        self.assertTrue(len(n) is 0)
+        self.assertIsInstance(n, list)
+
+        # test for specific JSON representation
+        o = b.from_json_string('[{"id": 34}]')
+        self.assertIsInstance(o, list)
+        self.assertTrue(len(o) > 0)
+        self.assertEqual(type(o[0]).__name__, "dict")        
+
     def test_create(self):
         """test for create method
         """
