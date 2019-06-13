@@ -27,3 +27,63 @@ class TestRectangle(unittest.TestCase):
         # check that id can be assigned
         u = Rectangle(5, 6, id=50)
         self.assertEqual(u.id, 50)
+
+    def test_area(self):
+        """test for area method
+        """
+
+    def test_display(self):
+        """test for display method
+        """
+
+    def test_update(self):
+        """test for update method
+        """
+
+    def test_to_dictionary(self):
+        """test for to_dictionary method
+        """
+
+    def test___str(self):
+        """test for __str__ method
+        """
+
+    def test_input_int(self):
+        """test for input_int method
+        """
+
+    def test_wh_under_zero(self):
+        """test for wh_under_zero method
+        """
+
+    def test_under_zero(self):
+        """test for under_zero method
+        """
+
+    def test_width_getter(self):
+        """test for width_getter
+        """
+
+    def test_width_setter(self):
+        """test for width setter
+        """
+
+    def test_height_setter(self):
+        """test for height setter
+        """
+
+    def test_x_getter(self):
+        """test for x getter
+        """
+
+    def test_x_setter(self):
+        """test for x setter
+        """
+
+    def test_y_getter(self):
+        """test for y getter
+        """
+
+    def test_y_setter(self):
+        """test for y setter
+        """
