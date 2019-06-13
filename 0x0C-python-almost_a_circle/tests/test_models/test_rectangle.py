@@ -55,6 +55,19 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             e = Rectangle(1, 2, 3, "e")
 
+        # check that x cannot be < 0
+        with self.assertRaises(ValueError):
+            i = Rectangle(1, 2, -1)
+
+        # check that y cannot be < 0
+        with self.assertRaises(ValueError):
+            j = Rectangle(1, 2, 3, -1)
+
+        # check that id can be any type
+        f = Rectangle(1, 2, id="f")
+        g = Rectangle(2, 3, id=["a", "b", "c"])
+        h = Rectangle(3, 4, id=(2, 3))
+
     def test_area(self):
         """test for area method
         """
