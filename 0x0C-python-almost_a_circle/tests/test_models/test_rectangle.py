@@ -165,30 +165,43 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r.under_zero(-2, "y")
 
-    def test_width_getter(self):
+    def test_width_property_and_setter(self):
         """test for width_getter
         """
+        r = Rectangle(1, 1)
+        with self.assertRaises(TypeError):
+            r.width = "r"
+        with self.assertRaises(ValueError):
+            r.width = -1
+        with self.assertRaises(ValueError):
+            r.width = 0
 
-    def test_width_setter(self):
-        """test for width setter
-        """
-
-    def test_height_setter(self):
+    def test_height_property_and_setter(self):
         """test for height setter
         """
 
-    def test_x_getter(self):
-        """test for x getter
-        """
+        r = Rectangle(1, 1)
+        with self.assertRaises(TypeError):
+            r.height = "r"
+        with self.assertRaises(ValueError):
+            r.height = -1
+        with self.assertRaises(ValueError):
+            r.height = 0
 
-    def test_x_setter(self):
+    def test_x_property_and_setter(self):
         """test for x setter
         """
+        r = Rectangle(1, 1)
+        with self.assertRaises(TypeError):
+            r.x = "p"
+        with self.assertRaises(ValueError):
+            r.x = -3
 
-    def test_y_getter(self):
-        """test for y getter
-        """
-
-    def test_y_setter(self):
+    def test_y_property_and_setter(self):
         """test for y setter
         """
+        r = Rectangle(1, 1)
+        with self.assertRaises(TypeError):
+            r.y = "x"
+        with self.assertRaises(ValueError):
+            r.y = -10
