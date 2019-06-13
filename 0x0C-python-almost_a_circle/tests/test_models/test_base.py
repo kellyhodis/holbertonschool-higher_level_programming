@@ -18,3 +18,23 @@ class TestBase(unittest.TestCase):
         self.assertEqual(t.id, 2)
         s.id = 2
         self.assertEqual(s.id, 2)
+
+    def test_to_json_string(self):
+        """test for to_json_string method
+        """
+
+    def test_save_to_file(self):
+        """test for save_to_file method
+        """
+
+    def test_from_json_string(self):
+        """test for from_json_string method
+        """
+
+    def test_create(self):
+        """test for create method
+        """
+
+    def test_load_from_file(self):
+        """test for load_from_file method
+        """
