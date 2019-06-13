@@ -11,6 +11,12 @@ class TestSquare(unittest.TestCase):
     def test___init(self):
         """test for __init__ method
         """
+        # check for correct instance assignments
+        r = Square(1)
+        self.assertEqual(r.width, 1)
+        self.assertEqual(r.height, 1)
+        self.assertEqual(r.x, 0)
+        self.assertEqual(r.y, 0)
 
     def test___str(self):
         """test for __str__ method
@@ -19,6 +25,24 @@ class TestSquare(unittest.TestCase):
     def test_update(self):
         """test for update method
         """
+        r = Square(1)
+
+        # check that every value is updated with list
+        r.update(3, 3, 2, 1)
+        self.assertEqual(r.id, 3)
+        self.assertEqual(r.width, 3)
+        self.assertEqual(r.height, 3)
+        self.assertEqual(r.x, 2)
+        self.assertEqual(r.y, 1)
+
+        # check that every value is updated with dictionary
+        dict = {"id": 1, "size": 2, "x": 0, "y": 1}
+        r.update(**dict)
+        self.assertEqual(r.id, 1)
+        self.assertEqual(r.width, 2)
+        self.assertEqual(r.height, 2)
+        self.assertEqual(r.x, 0)
+        self.assertEqual(r.y, 1)
 
     def test_to_dictionary(self):
         """test for to_dictionary method
