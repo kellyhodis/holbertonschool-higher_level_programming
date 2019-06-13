@@ -22,6 +22,11 @@ class TestBase(unittest.TestCase):
     def test_to_json_string(self):
         """test for to_json_string method
         """
+        s = Base()
+
+        # test return type of method
+        S = s.to_json_string([])
+        self.assertIsInstance(S, str)
 
     def test_save_to_file(self):
         """test for save_to_file method

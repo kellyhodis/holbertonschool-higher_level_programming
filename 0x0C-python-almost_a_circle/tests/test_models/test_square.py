@@ -56,7 +56,7 @@ class TestSquare(unittest.TestCase):
 
         # check that method returns obj of type dictionary
         R = r.to_dictionary()
-        self.assertTrue(R, dict)
+        self.assertIsInstance(R, dict)
 
     def test_size_property_and_setter(self):
         """test for size property and setter
