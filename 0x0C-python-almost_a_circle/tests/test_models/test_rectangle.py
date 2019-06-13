@@ -89,17 +89,33 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(r.height, 5)
 
         # check that update works for values with list
-        a = [8, 2, 4]
-        r.update(a)
-        self.assertTrue(r.width, 2)
-        self.assertTrue(r.height, 4)
-        self.assertTrue(r.id, 8)
+        r.update(8, 3, 4, 5, 9)
+        self.assertEqual(r.width, 3)
+        self.assertEqual(r.height, 4)
+        self.assertEqual(r.id, 8)
+        self.assertEqual(r.x, 5)
+        self.assertEqual(r.y, 9)
 
         # check that update works for values with dictionary
+        dict = {"id": 2, "width": 5, "x": 9, "height": 3, "y": 10}
+        r.update(**dict)
+        self.assertEqual(r.id, 2)
+        self.assertEqual(r.width, 5)
+        self.assertEqual(r.height, 3)
+        self.assertEqual(r.x, 9)
+        self.assertEqual(r.y, 10)
 
     def test_to_dictionary(self):
         """test for to_dictionary method
         """
+        # test that dictionary has 5 attributes:
+        # "id", "width", "height", "x", "y"
+        r = Rectangle(12, 2)
+        self.assertTrue(hasattr(r, "id"))
+        self.assertTrue(hasattr(r, "width"))
+        self.assertTrue(hasattr(r, "height"))
+        self.assertTrue(hasattr(r, "x"))
+        self.assertTrue(hasattr(r, "y"))
 
     def test___str(self):
         """test for __str__ method
