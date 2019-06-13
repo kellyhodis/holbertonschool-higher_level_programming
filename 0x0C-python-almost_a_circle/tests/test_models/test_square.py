@@ -141,4 +141,3 @@ class TestSquare(unittest.TestCase):
         s.save_to_file(li)
         l = s.load_from_file()
         self.assertIsInstance(l, list)
-
