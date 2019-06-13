@@ -17,3 +17,13 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.y, 0)
         self.assertEqual(r.width, 1)
         self.assertEqual(r.height, 2)
+
+        # check that id increments with instances
+        s = Rectangle(2, 4)
+        self.assertEqual(s.id, 2)
+        t = Rectangle(3, 3)
+        self.assertEqual(t.id, 3)
+
+        # check that id can be assigned
+        u = Rectangle(5, 6, id=50)
+        self.assertEqual(u.id, 50)
