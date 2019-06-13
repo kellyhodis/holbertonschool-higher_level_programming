@@ -28,9 +28,39 @@ class TestRectangle(unittest.TestCase):
         u = Rectangle(5, 6, id=50)
         self.assertEqual(u.id, 50)
 
+        # check that width cannot be 0 or a negative number
+        with self.assertRaises(ValueError):
+            v = Rectangle(-1, 2)
+        with self.assertRaises(ValueError):
+            w = Rectangle(0, 2)
+
+        # check that height cannot be 0 or a negative number
+        with self.assertRaises(ValueError):
+            z = Rectangle(3, 0)
+        with self.assertRaises(ValueError):
+            a = Rectangle(3, -2)
+
+        # check that width must be an integer
+        with self.assertRaises(TypeError):
+            b = Rectangle("b", 2)
+
+        # check that height must be an integer
+        with self.assertRaises(TypeError):
+            c = Rectangle(3, "c")
+
+        # check that x must be an integer
+        with self.assertRaises(TypeError):
+            d = Rectangle(1, 2, "d")
+
+        # check that y must be an integer
+        with self.assertRaises(TypeError):
+            e = Rectangle(1, 2, 3, "e")
+
     def test_area(self):
         """test for area method
         """
+        r = Rectangle(1, 2)
+        self.assertEqual(r.area(), 2)
 
     def test_display(self):
         """test for display method
