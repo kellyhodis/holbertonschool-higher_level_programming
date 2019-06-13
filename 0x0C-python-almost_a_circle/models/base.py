@@ -64,12 +64,12 @@ class Base:
         """returns a list of instances
         """
         filename = "{}.json".format(cls.__name__)
-        l = []
         try:
             with open(filename, "r") as file:
+                l = []
                 text = file.read()
         except:
-            return l
+            return []
         else:
             text_parsed = cls.from_json_string(text)
             for inst in text_parsed:
