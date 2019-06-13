@@ -68,10 +68,11 @@ class Base:
         try:
             with open(filename, "r") as file:
                 text = file.read()
-                text_parsed = cls.from_json_string(text)
-                for inst in text_parsed:
-                    obj = cls.create(**inst)
-                    l.append(obj)
-                return l
         except:
+            return l
+        else:
+            text_parsed = cls.from_json_string(text)
+            for inst in text_parsed:
+                obj = cls.create(**inst)
+                l.append(obj)
             return l
