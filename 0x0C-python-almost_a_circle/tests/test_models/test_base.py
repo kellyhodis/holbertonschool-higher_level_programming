@@ -59,7 +59,7 @@ class TestBase(unittest.TestCase):
         o = b.from_json_string('[{"id": 34}]')
         self.assertIsInstance(o, list)
         self.assertTrue(len(o) > 0)
-        self.assertEqual(type(o[0]).__name__, "dict")        
+        self.assertEqual(type(o[0]).__name__, "dict")
 
     def test_create(self):
         """test for create method
