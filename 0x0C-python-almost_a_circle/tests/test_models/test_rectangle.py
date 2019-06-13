@@ -71,16 +71,31 @@ class TestRectangle(unittest.TestCase):
     def test_area(self):
         """test for area method
         """
+        # check that area is correct value
         r = Rectangle(1, 2)
         self.assertEqual(r.area(), 2)
 
     def test_display(self):
         """test for display method
         """
+        # check for correct line count
+        r = Rectangle(1, 2)
 
     def test_update(self):
         """test for update method
         """
+        r = Rectangle(2, 5)
+        self.assertTrue(r.width, 2)
+        self.assertTrue(r.height, 5)
+
+        # check that update works for values with list
+        a = [8, 2, 4]
+        r.update(a)
+        self.assertTrue(r.width, 2)
+        self.assertTrue(r.height, 4)
+        self.assertTrue(r.id, 8)
+
+        # check that update works for values with dictionary
 
     def test_to_dictionary(self):
         """test for to_dictionary method
