@@ -21,6 +21,11 @@ class TestSquare(unittest.TestCase):
     def test___str(self):
         """test for __str__ method
         """
+        r = Square(3)
+
+        # check that metho returns obj of type string
+        R = r.__str__
+        self.assertTrue(R, str)
 
     def test_update(self):
         """test for update method
@@ -47,11 +52,15 @@ class TestSquare(unittest.TestCase):
     def test_to_dictionary(self):
         """test for to_dictionary method
         """
+        r = Square(3)
 
-    def test_size_getter(self):
-        """test for size getter
-        """
+        # check that method returns obj of type dictionary
+        R = r.to_dictionary()
+        self.assertTrue(R, dict)
 
-    def test_size_setter(self):
-        """test for size setter
+    def test_size_property_and_setter(self):
+        """test for size property and setter
         """
+        r = Square.create()
+        with self.assertRaises(TypeError):
+            r.size = "r"
