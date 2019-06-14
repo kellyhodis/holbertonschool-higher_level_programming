@@ -116,18 +116,22 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(hasattr(r, "height"))
         self.assertTrue(hasattr(r, "x"))
         self.assertTrue(hasattr(r, "y"))
+        R = r.to_dictionary()
+        self.assertTrue("id" in R)
+        self.assertTrue("width" in R)
+        self.assertTrue("height" in R)
+        self.assertTrue("x" in R)
+        self.assertTrue("y" in R)
 
     def test___str(self):
         """test for __str__ method
         """
         # test that the str representation is correct
         r = Rectangle(7, 8)
+        rstr = r.__str__
         """
-        self.assertEqual(r.__str__,
-                         "[Rectangle] ({}) {}/{} - {}/{}".format(r.id, r.x,
-                                                                 r.y,
-                                                                 r.width,
-                                                                 r.height))
+        self.assertEqual(rstr.split(), ['[Rectangle]', '(' + r.id + ')',
+                         r.x + '/' + r.y, '-', r.width + '/' + r.height])
         """
 
     def test_input_int(self):
