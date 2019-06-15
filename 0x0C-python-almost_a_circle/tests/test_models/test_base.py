@@ -23,7 +23,6 @@ class TestBase(unittest.TestCase):
         """test for to_json_string method
         """
         s = Base()
-
         # test return type of method
         S = s.to_json_string([])
         self.assertIsInstance(S, str)
@@ -64,7 +63,19 @@ class TestBase(unittest.TestCase):
     def test_create(self):
         """test for create method
         """
+        from models.rectangle import Rectangle
+        s = Rectangle(1, 1)
+
+        # test return type of method
+        dict = {"id": 1}
+        S = s.create(**dict)
+        self.assertIsInstance(S, Base)
 
     def test_load_from_file(self):
         """test for load_from_file method
         """
+        s = Base()
+
+        # test return type of method
+        S = s.load_from_file()
+        self.assertIsInstance(S, list)
