@@ -19,11 +19,7 @@ def list_all_match(mysql_username="", mysql_password="", database_name="",
     sql += "states.name LIKE BINARY %s ORDER BY cities.id ASC"
     cur.execute(sql, (match,))
     query_rows = cur.fetchall()
-    for i in range(len(query_rows)):
-        if i != len(query_rows) - 1:
-            print(query_rows[i][0], end=", ")
-        else:
-            print(query_rows[i][0])
+    print(", ".join(rows[0] for rows in query_rows))
     cur.close()
     conn.close()
 
