@@ -15,8 +15,8 @@ def list_all_match(mysql_username="", mysql_password="", database_name="",
                            charset="utf8")
     cur = conn.cursor()
     sql = "SELECT cities.name FROM cities"
-    sql += " JOIN states ON state_id=states.id WHERE states.name "
-    sql += "LIKE BINARY %s ORDER BY cities.id ASC"
+    sql += " JOIN states ON state_id=states.id WHERE "
+    sql += "states.name =%s ORDER BY cities.id ASC"
     cur.execute(sql, (match, ))
     query_rows = cur.fetchall()
     for i in range(len(query_rows)):
