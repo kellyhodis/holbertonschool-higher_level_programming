@@ -12,7 +12,9 @@ def list_all(mysql_username="", mysql_password="", database_name=""):
                            passwd=mysql_password, db=database_name,
                            charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT id, name FROM cities ORDER BY id ASC")
+    sql = "SELECT cities.id, cities.name, states.name FROM cities"
+    sql += " JOIN states ON state_id=states.id ORDER BY cities.id ASC"
+    cur.execute(sql)
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
