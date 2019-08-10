@@ -12,7 +12,7 @@ def list_all_n(mysql_username="", mysql_password="", database_name=""):
                            passwd=password, db=database,
                            charset="utf8")
     cur = conn.cursor()
-    sql = "SELECT * FROM states WHERE name REGEXP '^N' ORDER BY id ASC"
+    sql = "SELECT * FROM states WHERE name LIKE BINARY 'N%'  ORDER BY id ASC"
     cur.execute(sql)
     query_rows = cur.fetchall()
     for row in query_rows:
