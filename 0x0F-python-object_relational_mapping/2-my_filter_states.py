@@ -14,7 +14,7 @@ def list_all_match(mysql_username="", mysql_password="", database_name="",
                            charset="utf8")
     cur = conn.cursor()
     sql = "SELECT * FROM states WHERE name"
-    sql = sql + " LIKE '{}' ORDER by id ASC".format(match)
+    sql = sql + " LIKE BINARY '{}' ORDER by id ASC".format(match)
     cur.execute(sql)
     query_rows = cur.fetchall()
     for row in query_rows:
