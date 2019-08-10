@@ -6,7 +6,7 @@ import MySQLdb
 import sys
 
 
-def list_all_n(mysql_username="", mysql_password="", database_name=""):
+def list_all_n(mysql_username, mysql_password, database_name):
     ''' This is a script that lists all states with a name starting with N.'''
     conn = MySQLdb.connect(host="localhost", port=3306, user=mysql_username,
                            passwd=mysql_password, db=database_name,
