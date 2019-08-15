@@ -20,7 +20,7 @@ if __name__ == "__main__":
     engine = create_engine(sql, pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    objects = session.query(State).join(State.cities).order_by(State.id).all()
+    objects = session.query(State).all()
 
     for state in objects:
         print("{}: {}".format(state.id, state.name))
