@@ -13,4 +13,5 @@ if __name__ == "__main__":
                                                               sys.argv[1])
     r = requests.get(url)
     for i in r.json():
-        print("{}: {}".format(i.get('sha'), i.get('commit')['author']['name']))
+        print("{}: {}".format(i.get('sha'),
+                              i.get('commit').get('author').get('name')))
