@@ -29,21 +29,21 @@ $ git clone https://github.com/kellyhodis/holbertonschool-higher_level_programmi
 $ cd holbertonschool-higher_level_programming/0x12-javascript-warm_up
 ```
 
-## Running The Files
+#### Running The Files
 
-#### Run `0-javascript_is_amazing.js`:
+##### Run `0-javascript_is_amazing.js`:
 
 Print text to the screen.
 
 `./0-javascript_is_amazing.js`
 
-#### Run `1-multi_languages.js`:
+##### Run `1-multi_languages.js`:
 
 Print three lines of text to the screen.
 
 `./1-multi_languages.js`
 
-#### Run `2-arguments.js`:
+##### Run `2-arguments.js`:
 
 Print a message depending on number of arguments passed.
 
@@ -53,7 +53,7 @@ Print a message depending on number of arguments passed.
 
 `./2-arguments.js One Two`
 
-#### Run `3-value_argument.js`:
+##### Run `3-value_argument.js`:
 
 Print the first argument passed to script.
 
@@ -61,7 +61,7 @@ Print the first argument passed to script.
 
 `./3-value_argument.js Word`
 
-#### Run `4-concat.js`:
+##### Run `4-concat.js`:
 
 Print two arguments connected with "is".
 
@@ -71,7 +71,7 @@ Print two arguments connected with "is".
 
 `./4-concat.js`
 
-#### Run `5-to_integer.js`:
+##### Run `5-to_integer.js`:
 
 Print "My Number: `<first argument>`" if the first argument passed to the script can be converted to an integer.
 
@@ -81,49 +81,49 @@ Print "My Number: `<first argument>`" if the first argument passed to the script
 
 `./5-to_integer.js Not`
 
-#### Run `6-multi_languages_loop.js`:
+##### Run `6-multi_languages_loop.js`:
 
 Print three lines of text to the screen using an array and a loop.
 
 `./6-multi_languages_loop.js`
 
-#### Run `7-multi_c.js`:
+##### Run `7-multi_c.js`:
 
 Print "C is fun" times an integer provided to the script.
 
 `./7-multi_c.js 4`
 
-#### Run `8-square.js`:
+##### Run `8-square.js`:
 
 Print a square of width and length size of an integer provided to the script.
 
 `./8-square.js 3`
 
-#### Run `9-add.js`:
+##### Run `9-add.js`:
 
 Print the addition of two integers provided to the script.
 
 `./9-add.js 2 4`
 
-#### Run `10-factorial.js`:
+##### Run `10-factorial.js`:
 
 Print the factorial of an integer provided to the script.
 
 `./10-factorial.js 7`
 
-#### Run `11-second_biggest.js`:
+##### Run `11-second_biggest.js`:
 
 Print the second biggest integer in a list of integers provided to the script.
 
 `./11-second_biggest.js 1 2 3 4`
 
-#### Run `12-object.js`:
+##### Run `12-object.js`:
 
 Update a value inside a `const` object.
 
 `./12-object.js`
 
-#### Run `13-add.js`:
+##### Run `13-add.js`:
 
 Return the addition of two integers using import.
 
@@ -133,7 +133,7 @@ node
 > console.log(add(1, 2));
 ```
 
-#### Run `100-let_me_const.js`:
+##### Run `100-let_me_const.js`:
 
 Modify the value of an object inside another file.
 
@@ -144,7 +144,7 @@ node
 > console.log(myVar);
 ```
 
-#### Run `101-call_me_moby.js`:
+##### Run `101-call_me_moby.js`:
 
 Execute a function times an integer provided to the script.
 
@@ -156,7 +156,7 @@ node
   });
 ```
 
-#### Run `102-add_me_maybe.js`:
+##### Run `102-add_me_maybe.js`:
 
 Increments and calls a function.
 
@@ -168,7 +168,7 @@ node
   });
 ```
 
-#### Run `103-object_fct.js`:
+##### Run `103-object_fct.js`:
 
 Add an object method to increment the integer value property of myObject.
 
