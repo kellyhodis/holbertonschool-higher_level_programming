@@ -14,6 +14,19 @@ $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 ```
 
+#### Clone Git Repository
+
+Clone `holbertonschool-higher_level_programming`
+```
+$ git clone https://github.com/kellyhodis/holbertonschool-higher_level_programming.git
+```
+
+#### Navigate to Directory
+
+```
+$ cd holbertonschool-higher_level_programming/0x12-javascript-warm_up
+```
+
 #### Run `0-javascript_is_amazing.js`:
 
 Print text to the screen.
