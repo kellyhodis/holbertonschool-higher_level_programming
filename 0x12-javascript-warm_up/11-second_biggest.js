@@ -1,8 +1,8 @@
 #!/usr/bin/node
 if (process.argv.length === 2 | process.argv.length === 3) { console.log(0); } else {
   let max_ = process.argv[2];
-  let secondMax = max_;
-  for (let i = 2; i < process.argv.length; i++) {
+  let secondMax = Number.NEGATIVE_INFINITY;
+  for (let i = 3; i < process.argv.length; i++) {
     if (parseInt(process.argv[i]) > max_) {
       secondMax = max_;
       max_ = parseInt(process.argv[i]);
