@@ -29,7 +29,7 @@ $ git clone https://github.com/kellyhodis/holbertonschool-higher_level_programmi
 $ cd holbertonschool-higher_level_programming/0x13-javascript_objects_scopes_closures
 ```
 
-#### Running The Files
+#### Run The Files
 
 
 
