@@ -1,3 +1,5 @@
+![JavaScript Logo](https://live.staticflickr.com/3701/19224697601_6b600f21eb.jpg)
+
 # 0x12. Javascript - Warm up
 
 **Version 1.0.0**
