@@ -29,7 +29,7 @@ $ git clone https://github.com/kellyhodis/holbertonschool-higher_level_programmi
 $ cd holbertonschool-higher_level_programming/0x12-javascript-warm_up
 ```
 
-#### Running The Files
+#### Run The Files
 
 ##### Run `0-javascript_is_amazing.js`:
 
